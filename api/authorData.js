@@ -53,7 +53,7 @@ const createAuthor = (payload) => new Promise((resolve, reject) => {
 
 // GET SINGLE AUTHOR
 const getSingleAuthor = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/Authors.json?orderBy="uid"&equalTo"${uid}"`, {
+  fetch(`${endpoint}/Authors/${uid}.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
